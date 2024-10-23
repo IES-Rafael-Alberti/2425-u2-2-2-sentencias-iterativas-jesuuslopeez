@@ -4,8 +4,7 @@ Escribir un programa que pida al usuario un número entero positivo y muestre po
 def func_entrada():
     numero = int(input('Introduce un número positivo: '))
     if numero <= 0:
-        print('Introduce un número positivo')
-        return
+        raise ValueError('Tienes que introducir un número positivo.')
     return numero
 def func_procesamiento(numero):
     impares = ''

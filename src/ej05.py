@@ -6,9 +6,13 @@ def func_entrada():
     cantidad = float(input('Introduce la cantidad a invertir: '))
     interes_anual = float(input('Introduce el interés anual: '))
     num_years = int(input('Introduce el número de años: '))
-    return cantidad, interes_anual, num_years  
+    if cantidad <= 0:
+        raise ValueError('La cantidad a invertir tiene que ser mayor a 0.')  
+    if interes_anual <= 0:
+        raise ValueError('El interes anual tiene que ser mayor a 0.')
     if num_years <= 0:
-        print('El número de años tiene que ser mayor a 0.')
+        raise ValueError('El número de años tiene que ser mayor a 0.')
+    return cantidad, interes_anual, num_years
 
 def func_capital(cantidad, interes_anual, num_years): 
     capital = cantidad

@@ -3,6 +3,8 @@ Escribir un programa que pida al usuario un número entero y muestre por pantall
 '''
 def func_entrada():
     numero = int(input('Introduce un número entero: '))
+    if numero <= 0:
+        raise ValueError('Tienes que introducir un entero.')
     return numero
 
 def func_triangulo_asterisco(numero): 

@@ -14,7 +14,7 @@ def func_comprobacion_contrasena(contrasena_int_usuario):
         print('¡Contraseña incorrecta! Vuelve a intentarlo.')
         contrasena_int_usuario = input('Introduce la contraseña: ')
 
-    correcta = 'La contraseña es correcta!'
+    correcta = '¡La contraseña es correcta!'
 
     return correcta
 

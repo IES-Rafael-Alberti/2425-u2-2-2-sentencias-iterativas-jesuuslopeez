@@ -3,7 +3,9 @@ Escribir un programa que pida al usuario un número entero positivo y muestre po
 '''
 def func_entrada():
     numero = int(input('Introduce un número positivo: '))
-    return numero    
+    if numero <= 0:
+        raise ValueError('Tienes que introducir un número positivo.')
+    return numero
 
 def func_cuenta_atras(numero): 
     numeros = []

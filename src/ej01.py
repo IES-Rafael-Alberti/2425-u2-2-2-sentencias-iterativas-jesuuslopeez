@@ -3,7 +3,10 @@ Escribir un programa que pida al usuario una palabra y la muestre por pantalla 1
 '''
 def func_entrada():
     nombre = input('Introduce tu nombre: ')
-    return nombre
+    if nombre.isalpha():
+        return nombre
+    else:
+        raise ValueError('No puedes introducir números ni carácteres especiales.')
 
 def func_procesamiento(nombre):
     mensaje = ''

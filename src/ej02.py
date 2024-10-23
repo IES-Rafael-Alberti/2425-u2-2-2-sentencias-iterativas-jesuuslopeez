@@ -3,7 +3,10 @@ Escribir un programa que pregunte al usuario su edad y muestre por pantalla todo
 '''
 def func_entrada():
     edad = int(input('Introduce tu edad: '))
-    return edad
+    if edad > 0:
+        return edad
+    else:
+        raise ValueError('La edad no es válida.')
 
 def func_procesamiento(edad):
     final = ''

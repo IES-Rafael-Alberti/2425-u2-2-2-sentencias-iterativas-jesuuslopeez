@@ -2,9 +2,10 @@
 Escribir un programa que pida al usuario un número entero y muestre por pantalla si es un número primo o no.
 '''
 def func_entrada():
-    
-    num_entero = int(input('Introduce un número entero: '))
-    return num_entero
+    numero = int(input('Introduce un número entero: '))
+    if numero <= 0:
+        raise ValueError('Tienes que introducir un entero.')
+    return numero
 
 def func_num_primo(num_entero): 
     mensaje = ''
