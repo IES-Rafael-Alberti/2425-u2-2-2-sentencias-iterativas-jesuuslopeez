@@ -1,24 +1,26 @@
 '''
 Escribir un programa que pida al usuario un número entero positivo y muestre por pantalla todos los números impares desde 1 hasta ese número separados por comas.
 '''
-def func_numero(numero):
+def func_entrada():
+    numero = int(input('Introduce un número positivo: '))
     if numero <= 0:
         print('Introduce un número positivo')
         return
-    impares = []
+    return numero
+def func_procesamiento(numero):
+    impares = ''
 
-    for i in range(1, numero + 1):
-        if i % 2 != 0:
-            impares.append(str(i))
-    print(', '.join(impares))
+    for i in range(1, numero + 2, 2):
+        impares = impares + str(i) + ', '
+    return impares
 
 def main():
     #Entrada
-    numero = int(input('Introduce un número positivo: '))
+    numero = func_entrada()
     #Procesamiento
-
+    calculo = func_procesamiento(numero)
     #Salida
-    func_numero(numero)
+    print(calculo)
 
 if __name__ == '__main__':
     main()

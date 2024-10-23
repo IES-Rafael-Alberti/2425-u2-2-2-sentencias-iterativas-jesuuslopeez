@@ -1,17 +1,24 @@
 '''
 Escribir un programa que pida al usuario una palabra y la muestre por pantalla 10 veces.
 '''
-def func_nombre(nombre):
+def func_entrada():
+    nombre = input('Introduce tu nombre: ')
+    return nombre
+
+def func_procesamiento(nombre):
+    mensaje = ''
+
     for i in range(10):
-        print(nombre)
+        mensaje = mensaje + nombre + '\n'
+    return mensaje
 
 def main():
     #Entrada
-    nombre = input('Introduce tu nombre: ')
+    nombre = func_entrada()
     #Procesamiento
-
+    salida_final = func_procesamiento(nombre)
     #Salida
-    func_nombre(nombre)
+    print(salida_final)
 
 if __name__ == '__main__':
     main()
